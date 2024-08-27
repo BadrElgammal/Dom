@@ -33,13 +33,11 @@ function prevclick()
     {
         index=imgs.length-1;
     }
-    console.log(index);
     var sorce=imgs[index].getAttribute("src");
     lightBoxItem.style.backgroundImage="url("+sorce+")";
 }
 document.addEventListener("keydown",function(e)
 {
-    console.log(e.code);
     if(e.code==="ArrowRight")
         nextclick();
     else if(e.code === "ArrowLeft")

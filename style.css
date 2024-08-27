@@ -17,7 +17,8 @@ body
 }
 .item 
 {
-    width:430px;
+    max-width:430px;
+    width: auto;
     position: relative;
     text-align: center;
     cursor: pointer;
@@ -25,12 +26,14 @@ body
 .item img
 {
     width: 100%;
+    height: auto;
 }
 .caption
 {
     position: absolute;
     bottom: 50px;
     width: 80%;
+    height: auto;
     left: 10%;
     background-color: #fff;
     padding: 20px;
@@ -51,8 +54,9 @@ body
 #lightBoxItem
 {
     width: 50%;
-    height: 500px;
+    max-height: 500px;
     background-size: cover;
+    background-position: center;
     background-image: url(./images/portfolio-1.jpg);
     display: flex;
     align-items: center;
@@ -61,7 +65,7 @@ body
 }
 #lightBoxItem img
 {
-    width: 30px;
+    max-width: 30px;
     margin: 20px;
     cursor: pointer;
 }
@@ -70,4 +74,21 @@ body
     position: absolute;
     top: 0;
     right: 0;
+}
+@media screen and (max-width :500px)
+{
+    .contanir
+    {
+        font-size: 10px;
+    }
+    .caption
+    {
+        line-height: 15px;
+        bottom: 20px;
+    }
+    #lightBoxItem
+    {
+        width: 80%;
+        height: 300px;
+    }
 }
